@@ -1,0 +1,230 @@
+apiVersion: v1
+entries:
+  influxdb:
+  - apiVersion: v1
+    appVersion: 1.8.0
+    created: "2021-11-22T17:51:58.123765+08:00"
+    description: InfluxDB is an open source time-series database designed to handle
+      large write and read loads in real-time.
+    digest: c46da9b7844bc4f6d2a2251f9921a3970ee5282ddcd812cd4954991772807ae3
+    home: https://www.influxdata.com/products/influxdb-overview/
+    icon: https://bitnami.com/assets/stacks/influxdb/img/influxdb-stack-220x234.png
+    keywords:
+    - influxdb
+    - tick
+    - database
+    - timeseries
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: influxdb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-influxdb
+    urls:
+    - influxdb-0.5.0.tgz
+    version: 0.5.0
+  kong:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 2.2.1
+    created: "2021-11-22T17:51:58.136076+08:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.x.x
+    - condition: cassandra.enabled
+      name: cassandra
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: Kong is a scalable, open source API layer (aka API gateway or API
+      middleware) that runs in front of any RESTful API. Extra functionalities beyond
+      the core platform are extended through plugins. Kong is built on top of reliable
+      technologies like NGINX and provides an easy-to-use RESTful API to operate and
+      configure the system.
+    digest: f9950f0a2dd1985daf6a2429c5ad0a0799df7b7875485b7a7954ba65cc6d6404
+    home: https://github.com/bitnami/charts/tree/master/bitnami/kong
+    icon: https://bitnami.com/assets/stacks/kong/img/kong-stack-3.0.034.png
+    keywords:
+    - kong
+    - ingress
+    - openresty
+    - controller
+    - http
+    - web
+    - www
+    - reverse proxy
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: kong
+    sources:
+    - https://github.com/bitnami/bitnami-docker-kong
+    - https://konghq.com/
+    urls:
+    - kong-3.0.4.tgz
+    version: 3.0.4
+  mongodb:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 4.4.6
+    created: "2021-11-22T17:51:58.142239+08:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: NoSQL document-oriented database that stores JSON-like documents
+      with dynamic schemas, simplifying the integration of data in content-driven
+      applications.
+    digest: 228f102de3bb155285e349485f673f5855dbecb48d2213a04c6c7c2006045b58
+    home: https://github.com/bitnami/charts/tree/master/bitnami/mongodb
+    icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: mongodb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mongodb
+    - https://mongodb.org
+    urls:
+    - mongodb-10.19.0.tgz
+    version: 10.19.0
+  mysql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 8.0.22
+    created: "2021-11-22T17:51:58.146981+08:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Chart to create a Highly available MySQL cluster
+    digest: a00780f8c76ad806ffb90247d96cf65f18d8db7606a1967f24b926295df3e4fc
+    home: https://github.com/bitnami/charts/tree/master/bitnami/mysql
+    icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    - cluster
+    - high availability
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: mysql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mysql
+    - https://mysql.com
+    urls:
+    - mysql-8.2.3.tgz
+    version: 8.2.3
+  postgresql:
+  - apiVersion: v1
+    appVersion: 11.7.0
+    created: "2021-11-22T17:51:58.151506+08:00"
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: 84a4dc9879724db943230668348f9cc697527ff27d393c3abdd58c6e76aeac2c
+    home: https://www.postgresql.org/
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    urls:
+    - postgresql-8.9.5.tgz
+    version: 8.9.5
+  rabbitmq:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 3.8.9
+    created: "2021-11-22T17:51:58.155927+08:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Open source message broker software that implements the Advanced
+      Message Queuing Protocol (AMQP)
+    digest: 7b1bb59bcab7137fcb6cc0f60c4da33cce5f0ee617d1d87d1b0925dd7e7c8916
+    home: https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq
+    icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: rabbitmq
+    sources:
+    - https://github.com/bitnami/bitnami-docker-rabbitmq
+    - https://www.rabbitmq.com
+    urls:
+    - rabbitmq-8.7.2.tgz
+    version: 8.7.2
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.2.4
+    created: "2021-11-22T17:51:58.163469+08:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Open source, advanced key-value store. It is often referred to as
+      a data structure server since keys can contain strings, hashes, lists, sets
+      and sorted sets.
+    digest: 1c539b71df15d03566e3b7b0f4161640ed335c7f620b2c1c4fd727e1975d58b5
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    - http://redis.io/
+    urls:
+    - redis-14.6.2.tgz
+    version: 14.6.2
+generated: "2021-11-22T17:51:58.113776+08:00"
